@@ -155,9 +155,10 @@ ul{list-style:none}
 .hero-dimmer{position:absolute;left:50%;top:17%;transform:translateX(-50%);z-index:1;width:min(880px,94vw);height:72%;border-radius:18px;background:radial-gradient(60% 62% at 50% 46%,rgba(10,7,4,.62),rgba(10,7,4,.28) 62%,transparent 100%);pointer-events:none}
 .hero-title .t-main{
   display:block;font-size:clamp(52px,10vw,120px);font-weight:900;letter-spacing:.12em;line-height:1;
-  background:linear-gradient(180deg,#fff4d6,#f0c875 55%,#b4791f);
+  background:linear-gradient(180deg,#fffbe6,#ffdd9e 55%,#f8c05a);
   -webkit-background-clip:text;background-clip:text;color:transparent;
-  text-shadow:0 1px 0 rgba(20,15,12,.9),0 2px 0 rgba(20,15,12,.55),0 4px 10px rgba(20,15,12,.5);
+  -webkit-text-stroke:.5px rgba(255,255,255,.35);
+  text-shadow:0 0 16px rgba(255,200,90,.4),0 1px 2px rgba(150,100,20,.3);
 }
 .hero-title .t-sub{
   display:block;font-size:clamp(24px,4.5vw,52px);font-weight:700;letter-spacing:.6em;
