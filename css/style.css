@@ -26,7 +26,7 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{
   font-family:var(--font-sans);
   color:var(--paper);
-  background:var(--ink);
+  background:#221a11;   /* 在原极暗墨黑基础上提亮到暖调深棕，减轻整体沉闷感 */
   line-height:1.7;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
@@ -142,8 +142,8 @@ ul{list-style:none}
 .hero-media{position:absolute;inset:0}
 .hero-bg{width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:heroZoom 16s ease-out forwards}
 @keyframes heroZoom{to{transform:scale(1)}}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,12,.55),rgba(20,15,12,.7) 55%,var(--ink))}
-.hero-veil2{position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 20%,transparent,rgba(20,15,12,.55))}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,12,.22),rgba(20,15,12,.38) 50%,#221a11)}
+.hero-veil2{position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 20%,transparent,rgba(20,15,12,.30))}
 .hero-inner{position:relative;z-index:5;padding:120px 20px 40px}
 .hero-badge{
   display:inline-block;padding:8px 18px;border:1px solid var(--line);
