@@ -4,20 +4,20 @@
    ========================================================== */
 
 :root{
-  --ink:#140f0c;          /* 深墨暖黑 */
-  --panel:#1c1510;
-  --panel2:#231a13;
-  --line:rgba(217,164,65,.18);
+  --ink:#1a130d;          /* 暖墨黑（略提亮） */
+  --panel:#2a1f17;        /* 面板色（提亮一档） */
+  --panel2:#32261c;       /* 二级面板（提亮一档） */
+  --line:rgba(217,164,65,.22);
   --gold:#d9a441;
   --gold-2:#f0c875;
   --gold-3:#b4791f;
   --red:#c0392b;
   --red-2:#e2573f;
-  --paper:#f3e9d4;       /* 羊皮纸暖白 */
-  --muted:#c2b198;
-  --dim:#8f7f68;
+  --paper:#f7eede;       /* 羊皮纸暖白（提亮一档） */
+  --muted:#cdbc9f;        /* 略提亮 */
+  --dim:#9b8b71;          /* 略提亮 */
   --font-serif:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
-  --font-sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --font-sans:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-ui;
   --shadow:0 24px 60px rgba(0,0,0,.5);
 }
 
@@ -26,7 +26,7 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{
   font-family:var(--font-sans);
   color:var(--paper);
-  background:#221a11;   /* 在原极暗墨黑基础上提亮到暖调深棕，减轻整体沉闷感 */
+  background:linear-gradient(180deg,#2e2316 0%,#2a1f15 50%,#251a12 100%);   /* 整体提亮：暖调深棕（提亮约30%） */
   line-height:1.7;
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
@@ -142,8 +142,8 @@ ul{list-style:none}
 .hero-media{position:absolute;inset:0}
 .hero-bg{width:100%;height:100%;object-fit:cover;object-position:center 35%;transform:scale(1.06);animation:heroZoom 16s ease-out forwards}
 @keyframes heroZoom{to{transform:scale(1)}}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,12,.18),rgba(20,15,12,.28) 50%,rgba(20,15,12,.85) 100%)}
-.hero-veil2{position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 25%,transparent,rgba(20,15,12,.22))}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,15,12,.10),rgba(20,15,12,.18) 50%,rgba(20,15,12,.55) 100%)}
+.hero-veil2{position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 25%,transparent,rgba(20,15,12,.14))}
 .hero-inner{position:relative;z-index:5;padding:120px 20px 40px}
 .hero-badge{
   display:inline-block;padding:8px 18px;border:1px solid var(--line);
@@ -152,7 +152,7 @@ ul{list-style:none}
 }
 .hero-title{font-family:var(--font-serif);margin:0 0 20px;position:relative;z-index:2}
 .hero-title .t-main,.hero-title .t-sub{position:relative;z-index:2}
-.hero-dimmer{position:absolute;left:50%;top:17%;transform:translateX(-50%);z-index:1;width:min(880px,94vw);height:72%;border-radius:18px;background:radial-gradient(60% 62% at 50% 46%,rgba(10,7,4,.62),rgba(10,7,4,.28) 62%,transparent 100%);pointer-events:none}
+.hero-dimmer{position:absolute;left:50%;top:17%;transform:translateX(-50%);z-index:1;width:min(880px,94vw);height:72%;border-radius:18px;background:radial-gradient(60% 62% at 50% 46%,rgba(10,7,4,.38),rgba(10,7,4,.18) 62%,transparent 100%);pointer-events:none}
 .hero-title .t-main{
   display:block;font-size:clamp(52px,10vw,120px);font-weight:900;letter-spacing:.12em;line-height:1;
   background:linear-gradient(180deg,#fffbe6,#ffdd9e 55%,#f8c05a);
@@ -276,7 +276,7 @@ ul{list-style:none}
 .reserve-note{margin-top:22px;color:var(--dim);font-size:14px;line-height:2}
 
 /* ---------- 页脚 ---------- */
-.footer{background:#100c09;border-top:1px solid var(--line);padding:44px 0 38px}
+.footer{background:#1a130d;border-top:1px solid var(--line);padding:44px 0 38px}
 .foot-top{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .foot-brand{display:flex;align-items:center;gap:12px}
 .foot-brand .brand-seal-img{width:38px;height:38px}
