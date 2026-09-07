@@ -53,4 +53,27 @@
     }
   }
   if(boxes.length){ tick(); setInterval(tick, 1000); }
+
+  /* 多平台下载：data-adapt 按钮按设备自动分流（iOS→7606 苹果版，其他→7631 安卓版） */
+  var DL = {
+    android: "https://sdkn-ldy.zhangyu39.com/?app_id=7631&promote_id=1778",
+    ios:     "https://sdkn-ldy.zhangyu39.com/?app_id=7606&promote_id=1778"
+  };
+  function detectMobile(){
+    var ua = navigator.userAgent;
+    if(/iPhone|iPad|iPod/i.test(ua)) return 'ios';
+    if(/Android/i.test(ua)) return 'android';
+    return 'desktop';
+  }
+  var adaptBtns = document.querySelectorAll('[data-adapt]');
+  adaptBtns.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      var dev = detectMobile();
+      // 仅当能识别设备时自动分流，否则保留原 7631 直链
+      if(dev === 'ios'){
+        e.preventDefault();
+        window.location.href = DL.ios;
+      }
+    });
+  });
 })();
