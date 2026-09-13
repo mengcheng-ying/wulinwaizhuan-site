@@ -1,0 +1,19 @@
+name: 百度链接逐条推送
+
+on:
+  schedule:
+    - cron: '38 19 * * *'   # 每天北京时间 03:38（UTC 19:38）定时逐条推送
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  baidu-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 逐条推送链接到百度
+        env:
+          BAIDU_TOKEN: ${{ secrets.BAIDU_PUSH_TOKEN }}
+        run: node .github/scripts/baidu-push-onebyone.js
