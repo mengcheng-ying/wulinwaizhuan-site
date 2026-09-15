@@ -1,8 +1,9 @@
 name: 百度链接逐条推送
 
 on:
-  schedule:
-    - cron: '38 19 * * *'   # 每天北京时间 03:38（UTC 19:38）定时逐条推送
+  # 定时推送已停用：改为手动（workflow_dispatch / push），由人工核验后手动提交百度
+  # schedule:
+  #   - cron: '38 19 * * *'   # 每天北京时间 03:38（UTC 19:38）定时逐条推送
   push:
     branches: [main]
   workflow_dispatch:
